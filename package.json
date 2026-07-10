@@ -1,0 +1,35 @@
+{
+  "name": "eduquest",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "dev": "vite",
+    "build": "vite build && node scripts/gen-sw-manifest.mjs",
+    "preview": "vite preview",
+    "test:watch": "vitest",
+    "e2e": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddongkkoo100-star/Spec-eduquest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddongkkoo100-star/Spec-eduquest/issues"
+  },
+  "homepage": "https://github.com/ddongkkoo100-star/Spec-eduquest#readme",
+  "dependencies": {
+    "phaser": "^4.2.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "fake-indexeddb": "^6.2.5",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.10"
+  },
+  "type": "module"
+}
