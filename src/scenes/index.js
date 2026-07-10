@@ -4,9 +4,12 @@ import Boot from './Boot.js';
 import RunnerScene from './m1_runner/RunnerScene.js';
 import ClockScene from './m2_clock/ClockScene.js';
 import BlocksScene from './m3_blocks/BlocksScene.js';
+import BridgeScene from './m4_bridge/BridgeScene.js';
+import SlashScene from './k2_slash/SlashScene.js';
+import StonesScene from './k3_stones/StonesScene.js';
 
 // 각 페이즈에서 게임 씬을 여기에 추가한다.
-const GAME_SCENES = [RunnerScene, ClockScene, BlocksScene];
+const GAME_SCENES = [RunnerScene, ClockScene, BlocksScene, BridgeScene, SlashScene, StonesScene];
 
 export async function createGame(parent) {
   return new Promise((resolve) => {
