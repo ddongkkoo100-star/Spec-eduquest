@@ -124,7 +124,7 @@ export function choiceRow(scene, choices, onPick) {
 export function keypad(scene, onSubmit) {
   const objs = [];
   let value = '';
-  const display = label(scene, W - 200, H - 330, '', 46, '#fff', { backgroundColor: '#1a2340', padding: { x: 30, y: 10 } });
+  const display = label(scene, W - 200, H - 370, '', 46, '#fff', { backgroundColor: '#1a2340', padding: { x: 30, y: 10 } });
   display.setDepth(500);
   objs.push(display);
 
@@ -132,7 +132,7 @@ export function keypad(scene, onSubmit) {
   layout.forEach((row, r) => {
     [...row].forEach((ch, c) => {
       const x = W - 320 + c * 120;
-      const y = H - 250 + r * 78;
+      const y = H - 290 + r * 74;
       const b = bigButton(scene, x, y, ch, () => {
         sfx.play('click');
         if (ch === 'C') value = '';

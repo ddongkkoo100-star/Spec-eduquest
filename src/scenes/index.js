@@ -2,9 +2,11 @@
 import Phaser from 'phaser';
 import Boot from './Boot.js';
 import RunnerScene from './m1_runner/RunnerScene.js';
+import ClockScene from './m2_clock/ClockScene.js';
+import BlocksScene from './m3_blocks/BlocksScene.js';
 
 // 각 페이즈에서 게임 씬을 여기에 추가한다.
-const GAME_SCENES = [RunnerScene];
+const GAME_SCENES = [RunnerScene, ClockScene, BlocksScene];
 
 export async function createGame(parent) {
   return new Promise((resolve) => {
