@@ -8,9 +8,11 @@ export function mountTitle(root) {
     el('div', { text: '🚀', class: 'breathe', style: 'font-size:110px;' }),
     el('div', { class: 'eq-title', text: '에듀퀘스트', style: 'font-size:64px;letter-spacing:4px;' }),
     el('div', { text: '수학과 국어의 모험 세계로!', style: 'font-size:22px;opacity:.85;margin-bottom:26px;' }),
-    btn('모험 시작!', () => {
+    btn('모험 시작!', async () => {
       sfx.init(); // 첫 제스처: 오디오 웜업
       sfx.play('levelup');
+      const bgm = await import('../bgm.js');
+      bgm.start('map');
       router.showScreen('worldmap');
     }, 'big green')
   );

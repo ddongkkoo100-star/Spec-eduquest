@@ -24,7 +24,7 @@ const files = walk(DIST).filter((f) => !f.endsWith('sw.js'));
 const version = Date.now().toString(36);
 let sw = readFileSync(SW_SRC, 'utf8');
 sw = sw
-  .replace('__PRECACHE_MANIFEST__', JSON.stringify(files, null, 0))
-  .replace('__CACHE_VERSION__', version);
+  .replaceAll('__PRECACHE_MANIFEST__', JSON.stringify(files, null, 0))
+  .replaceAll('__CACHE_VERSION__', version);
 writeFileSync(join(DIST, 'sw.js'), sw);
 console.log(`[sw] 프리캐시 ${files.length}개 파일, 캐시 버전 ${version}`);

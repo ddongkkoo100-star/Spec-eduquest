@@ -60,6 +60,12 @@ export function init() {
   return true;
 }
 
+/** BGM 등 다른 모듈이 같은 오디오 버스를 쓰도록 노출 (마스터 음소거 공유) */
+export function getBus() {
+  init();
+  return ctx ? { ctx, master } : null;
+}
+
 /**
  * 효과음 재생. @param {string} name PRESETS 키 @param {{combo?:number, detune?:number}} opts
  * @returns {boolean} 재생 여부 (컨텍스트 없음/음소거/알 수 없는 이름 → false)

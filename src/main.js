@@ -37,6 +37,8 @@ router.onGameExit((result) => {
 sfx.setMuted(store.getSettings().muted);
 store.getProgress();
 router.showScreen('title');
+const splash = document.getElementById('splash');
+if (splash) splash.remove();
 
 // PWA 서비스워커 (Phase 6에서 sw.js 생성 — 프로덕션 빌드에만 존재)
 if ('serviceWorker' in navigator && !import.meta.env.DEV) {
