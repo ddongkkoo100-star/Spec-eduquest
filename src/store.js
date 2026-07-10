@@ -160,6 +160,7 @@ export const IDB_STORES = {
   gugupyo: { keyPath: 'id', autoIncrement: true }, // 급수표 문서
   mistakes: { keyPath: 'text' },                   // 받아쓰기 오답노트 (문장 원문이 키)
   weakness: { keyPath: 'key' },                    // 수학 약점 가중치
+  stats: { keyPath: 'key' },                       // 받아쓰기 급수별 정답률 (docId:level)
 };
 
 let _dbPromise = null;

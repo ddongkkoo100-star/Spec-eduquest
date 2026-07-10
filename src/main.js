@@ -8,11 +8,14 @@ import { mountTitle } from './hub/title.js';
 import { mountWorldMap } from './hub/worldmap.js';
 import { mountShop } from './hub/shop.js';
 import { mountParent } from './hub/parent.js';
+import { mountDictation } from './hub/k1_dictation.js';
+import './hub/parent_k1.js'; // 부모 모드 섹션 등록 (급수표/TTS/통계)
 
 router.registerScreen('title', mountTitle);
 router.registerScreen('worldmap', mountWorldMap);
 router.registerScreen('shop', mountShop);
 router.registerScreen('parent', mountParent);
+router.registerScreen('k1', mountDictation);
 
 // 게임 종료 → 보상 반영 → 월드맵 복귀
 router.onGameExit((result) => {
