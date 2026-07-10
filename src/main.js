@@ -16,12 +16,16 @@ router.registerScreen('parent', mountParent);
 
 // 게임 종료 → 보상 반영 → 월드맵 복귀
 router.onGameExit((result) => {
-  if (result && result.world && result.id) {
+  if (result && result.cleared && result.world && result.id) {
+    // 스테이지 클리어: 코인+별+스트릭 반영
     const r = store.recordStageClear(result.world, result.id, result);
     if (r.streakReward) {
       toast('🔥 7일 연속 달성! 특별 스킨 "불꽃 왕관"을 받았어요! 👑');
       sfx.play('levelup');
     }
+  } else if (result && result.coins > 0) {
+    // 중도 포기/게임오버여도 모은 코인은 지급 (벌점 금지 원칙)
+    store.addCoins(result.coins);
   }
   router.showScreen('worldmap');
 });

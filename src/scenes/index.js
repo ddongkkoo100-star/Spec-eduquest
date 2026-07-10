@@ -1,9 +1,10 @@
 // Phaser 게임 인스턴스 생성 — 미니게임 첫 진입 시 1회만 실행.
 import Phaser from 'phaser';
 import Boot from './Boot.js';
+import RunnerScene from './m1_runner/RunnerScene.js';
 
 // 각 페이즈에서 게임 씬을 여기에 추가한다.
-const GAME_SCENES = [];
+const GAME_SCENES = [RunnerScene];
 
 export async function createGame(parent) {
   return new Promise((resolve) => {

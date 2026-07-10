@@ -1,6 +1,6 @@
 // 미니게임 카탈로그 — 페이즈 진행에 따라 ready를 켠다.
 export const GAMES = [
-  { world: 'math', id: 'm1', name: '구구단 러너', icon: '🏃', grad: 'linear-gradient(160deg,#ff8a5c,#e0522f)', kind: 'phaser', scene: 'm1', ready: false },
+  { world: 'math', id: 'm1', name: '구구단 러너', icon: '🏃', grad: 'linear-gradient(160deg,#ff8a5c,#e0522f)', kind: 'phaser', scene: 'm1', ready: true },
   { world: 'math', id: 'm2', name: '시계 폭탄 해제', icon: '⏰', grad: 'linear-gradient(160deg,#7c6cff,#4a3ad1)', kind: 'phaser', scene: 'm2', ready: false },
   { world: 'math', id: 'm3', name: '블록 연산', icon: '⛏️', grad: 'linear-gradient(160deg,#5cb85c,#2e8b3a)', kind: 'phaser', scene: 'm3', ready: false },
   { world: 'math', id: 'm4', name: '길이 다리 건설', icon: '🌉', grad: 'linear-gradient(160deg,#37b6d9,#1f7fa8)', kind: 'phaser', scene: 'm4', ready: false },
